@@ -8,6 +8,7 @@ GEM
   specs:
     ast (2.4.3)
     diff-lcs (1.6.2)
+    dotenv (3.1.8)
     json (2.12.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
@@ -73,6 +74,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  dotenv (~> 3.1)
   kobanapix!
   rake (~> 13.0)
   rspec (~> 3.0)
