@@ -14,7 +14,7 @@ pix = Kobanapix::Pix.create(
     name: "Joao Teste",
     document_number: "74754909046",
   }
-) # Crie o pix
+)
 puts pix.inspect
 # If an error occurs
 pix.saved? # => false
