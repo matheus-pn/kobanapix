@@ -2,19 +2,21 @@
 
 module Kobanapix
   class Pix
-    FIELDS = %i[amount payer_document_number payer_name
-    pix_account_id expire_at].freeze
+    attr_reader :saved, :response
+    attr_accessor :params
 
-    attr_reader :params, :saved
-
-    def initialize(**params)
+    def saved?
+      saved
+    end
+  
+    def initialize(args = {})
       @saved = false
-      @params = params.select { |k, _| FIELDS.include?(k) }
+      @params = args
       @response = nil
     end
 
-    def self.create(**args)
-      pix = new(**args)
+    def self.create(args = {})
+      pix = new(args)
       pix.save
       pix
     end

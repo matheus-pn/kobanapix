@@ -4,10 +4,6 @@ require "kobanapix/rest"
 require "kobanapix/pix"
 require "kobanapix/version"
 
-# For initial testing only
-require "dotenv" # TODO: Remove
-Dotenv.load #  TODO: Remove
-
 module Kobanapix
   class << self
     attr_reader :config, :client

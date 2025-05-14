@@ -26,6 +26,8 @@ module Kobanapix
   end
 
   class Client
+    attr_reader :auth_token
+
     def initialize(auth_token:)
       @auth_token = auth_token
     end
