@@ -28,7 +28,6 @@ pix = Kobanapix::Pix.create(
     document_number: "74754909046",
   }
 )
-puts pix.inspect
 # If an error occurs
 pix.saved? # => false
 pix.errors # => [{"code"=>"validation_error", "param"=>"amount", "detail"=>"Quantia não pode ficar em branco"}]
