@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require "webmock/rspec"
+require "simplecov"
+SimpleCov.start { add_filter "/spec/" }
+
 require "kobanapix"
 
 RSpec.configure do |config|

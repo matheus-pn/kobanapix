@@ -9,6 +9,19 @@ module Kobanapix
       saved
     end
   
+    # Helper methods
+    def qrcode_url
+      response&.body&.dig("data", "formats", "qrcode", "png")
+    end
+
+    def txid
+      response&.body&.dig("data", "txid")
+    end
+
+    def uid
+      response&.body&.dig("data", "uid")
+    end
+
     def initialize(args = {})
       @saved = false
       @params = args

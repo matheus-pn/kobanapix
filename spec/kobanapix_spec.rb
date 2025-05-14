@@ -2,11 +2,11 @@
 require "spec_helper"
 
 RSpec.describe Kobanapix do
-  it "version number" do
+  it "has version number" do
     expect(Kobanapix::VERSION).not_to be nil
   end
 
-  it "direct config" do
+  it "applies direct config" do
     api_url = "url"
     api_token = "token"
 
@@ -21,7 +21,7 @@ RSpec.describe Kobanapix do
     expect(Kobanapix.client).to be_kind_of(Kobanapix::Client)
   end
 
-  it "env config" do
+  it "applies env config" do
     token = "token"
     allow(ENV).to receive(:fetch).and_return(token)
 
